@@ -1908,6 +1908,12 @@
                         if (el.closest('.navbar_wrap') || el.closest('.w-nav') || el.closest('.w-dropdown-list')) return false;
                         return true;
                     });
+                    if (isMobile) {
+                        els.forEach(function (el) {
+                            gsap.set(el, { opacity: 1, y: 0, clearProps: 'transform,filter' });
+                        });
+                        return;
+                    }
                     els.forEach(function (el) {
                         gsap.set(el, { clearProps: 'transform,filter' });
                         gsap.fromTo(el,
