@@ -9069,6 +9069,37 @@ figure {
   }
 }
 
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .service_sticky-trigger,
+  .scroll-mobile_trigger {
+    height: auto;
+  }
+
+  .service_sticky-camera,
+  .scroll-mobile_camera {
+    position: relative;
+    top: auto;
+  }
+
+  .our-story_item,
+  .story-slider_mask,
+  .locatioin_item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .story-slider_mask {
+    overflow: hidden;
+  }
+}
+
 /* ===== Hero lead/callback form ===== */
 .lead-form_card{margin-top:24px;max-width:430px;background:#fff;border-radius:20px;padding:24px 24px 20px;box-shadow:0 28px 70px rgba(2,47,52,.30);}
 .lead-form_title{font-family:var(--font,'Sora',sans-serif);font-size:21px;font-weight:600;color:var(--primitive-color--primary-900,#011f23);letter-spacing:-.4px;}
