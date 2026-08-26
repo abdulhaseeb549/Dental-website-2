@@ -1858,6 +1858,7 @@
             /* ========== GSAP COUNTER ========== */
             function initCounterAnimations() {
                 const counters = document.querySelectorAll(".about-hero_info-item_title");
+                const counterDuration = window.matchMedia("(max-width: 767px)").matches ? 2 : 3.5;
 
                 counters.forEach( (counter) => {
                     const targetText = counter.textContent.trim();
@@ -1871,7 +1872,7 @@
 
                     gsap.to(counter, {
                         innerText: targetNumber,
-                        duration: 3.5,
+                        duration: counterDuration,
                         ease: "power2.out",
                         snap: {
                             innerText: 1
@@ -1898,6 +1899,8 @@
                 function runReveals() {
                     if (!window.gsap) return;
                     var hasST = !!window.ScrollTrigger;
+                    var isMobile = window.matchMedia('(max-width: 767px)').matches;
+                    var revealDuration = isMobile ? 0.45 : 0.9;
                     if (hasST) gsap.registerPlugin(ScrollTrigger);
                     var els = gsap.utils.toArray('[data-w-id]').filter(function (el) {
                         var s = el.getAttribute('style') || '';
@@ -1910,7 +1913,7 @@
                         gsap.fromTo(el,
                             { opacity: 0, y: 40 },
                             {
-                                opacity: 1, y: 0, duration: 0.9, ease: 'power2.out',
+                                opacity: 1, y: 0, duration: revealDuration, ease: 'power2.out',
                                 scrollTrigger: hasST ? { trigger: el, start: 'top 97%', once: true } : undefined
                             }
                         );
