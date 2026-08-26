@@ -9098,6 +9098,32 @@ figure {
   .story-slider_mask {
     overflow: hidden;
   }
+
+  .service_list {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    gap: var(--_size-variables---element-spacing--2xl);
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-auto-columns: auto;
+  }
+
+  .service_item-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .scroll_track,
+  .scroll_list,
+  .collection-list-wrapper,
+  .service_wrap {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    transform: none;
+  }
 }
 
 /* ===== Hero lead/callback form ===== */
