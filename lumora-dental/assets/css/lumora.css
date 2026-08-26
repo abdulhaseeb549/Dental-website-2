@@ -9113,6 +9113,8 @@ figure {
   .service_item-wrap {
     width: 100%;
     max-width: 100%;
+    height: auto;
+    flex: none;
   }
 
   .scroll_track,
@@ -9123,6 +9125,20 @@ figure {
     max-width: 100%;
     margin-right: 0;
     transform: none;
+  }
+
+  .scroll_track {
+    translate: none !important;
+    transform: none !important;
+  }
+
+  .service_wrap {
+    overflow: hidden;
+  }
+
+  .service_item {
+    height: auto;
+    min-height: 340px;
   }
 }
 
